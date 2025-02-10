@@ -1,0 +1,184 @@
+@use 'header';
+@use 'variaveis';
+@use 'hero';
+@use 'skills';
+@use 'projetos';
+@use 'contatos';
+
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+
+
+h2 {
+    color: variaveis.$corDoTexto;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: variaveis.$corTerceira;
+    padding-bottom: 12px;
+    text-decoration: none;
+}
+
+.title {
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #F9F9F9;
+    line-height: 62px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 48px;
+        justify-content: center;
+
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 20px;
+        line-height: 48px;
+    }
+
+    
+}
+
+
+
+.buttondois {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    font-size: 12px;
+    color: variaveis.$corDoTextoSecundario;
+    background-color: variaveis.$corDeFundoBotaoTransparente;
+    text-transform: uppercase;
+    border-radius: 18px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    background-image: none;
+    outline: none;
+
+    
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        width: 50%;
+    }
+
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 8%);
+        cursor: pointer;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttontres {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 40px;
+    font-size: 12px;
+    color: variaveis.$corDoTextoSecundario;
+    background-color: variaveis.$corDeFundoBotaoTransparente;
+    text-transform: uppercase;
+    border-radius: 18px;
+    text-decoration: none !important;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    background-image: none;
+    outline: none;
+
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+    
+
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 8%);
+        cursor: pointer;
+    }
+
+}
+
+.buttonquatro {
+    
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100px;
+    padding: 8px 14px;
+    color: variaveis.$corDoTextoSecundario;
+    background-color: variaveis.$corDeFundoBotaoTransparente;
+    border-radius: 12px;
+    background-image: none;
+    border: none;
+    
+    
+    
+
+    &:hover {
+        background-color: darken(variaveis.$corDeFundoBotaoTransparente, 4%);
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+}
+
+
+
+
+
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+    }
+    
+  /* Estiliza o controle deslizante (thumb) */
+    ::-webkit-scrollbar-thumb {
+    background-color: variaveis.$corDeFundoBotaoPrimario; /* Cor do controle deslizante */
+    border-radius: 6px; /* Raio de borda do controle deslizante */
+    }
+    
+  /* Estiliza a pista (track) */
+    ::-webkit-scrollbar-track {
+    background-color: variaveis.$corDeFundoBotaoTransparente; /* Cor da pista */
+    }
+    
+  /* Estiliza os botões de seta */
+    ::-webkit-scrollbar-button {
+    display: none; /* Oculta os botões de seta */
+    }
+    

@@ -1,0 +1,185 @@
+@use 'variaveis';
+
+
+.header {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: sticky;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        max-width: 200%;
+    }
+
+
+
+    &__menu {
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 63px;
+        width: 90%;
+        list-style: none;
+
+        @media (max-width: 768px) {
+            width: 80%;
+            margin: 0px;
+            padding-left: 35px;
+        }
+
+            &__imagem {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background-size: cover;
+                height: 30px;
+
+            }
+
+    }
+}
+
+header.scrolled {
+    background-color: variaveis.$corDeFundoBotaoTransparente;
+    opacity: 1;
+}
+
+
+
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background-image: linear-gradient(90deg, #8257E6 0%, #A40EE4 92.32%);
+}
+
+
+
+.barra {
+    display: flex;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    opacity: 1;
+    background-color: #6045a1;
+    padding-left: 400px;
+
+    @media (max-width: 1024px) {
+        align-items: baseline;
+        padding-bottom: 10px;
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+    }
+    
+
+    
+
+    &__lista {
+        font-size: 18px;
+
+        @media (max-width: 1024px) {
+            font-size: 18px; 
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            line-height: 42px;
+        }
+        
+    }
+}
+
+
+
+.caixa::after {
+    @media (max-width: 1024px) {
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        content: "";
+        display: flex;
+        width: 100%;
+        height: 0.1rem;
+        background-image: linear-gradient(90deg, #8257E6 0%, #A40EE4 92.32%);
+    }
+}
+
+
+
+.linha {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background-image: linear-gradient(90deg, #8257E6 0%, #A40EE4 92.32%);
+}
+
+
+
+.caixote {
+    background-color: variaveis.$corDeFundoBotaoTransparente;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+    } 
+}
+
+.xis {
+    background-color: variaveis.$corDeFundoBotaoTransparente;
+    border: none;
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+    } 
+}
+
+.utensilios {
+    list-style: none;
+    display: inline-block;
+    padding-right: 50px;
+
+    @media (max-width: 768px) {
+        padding-right: 20px;
+    }
+}
+
+
+#caixa {
+    position: sticky;
+    display: none; /* inicialmente escondido */
+    opacity: 0; /* Define a opacidade inicial para 0 */
+    height: 0; /* altura inicial */
+}
+
+/* Defina os keyframes para a animação de fade */
+@keyframes fade {
+    from { opacity: 0; } /* Opacidade inicial (0) */
+    to { opacity: 1; } /* Opacidade final (1) */
+}
+
+/* Defina os keyframes para a animação de fadeout */
+@keyframes fadeout {
+    from { opacity: 1; } /* Opacidade inicial (1) */
+    to { opacity: 0; } /* Opacidade final (0) */
+}
+
+/* Estilize o elemento que será animado */
+#caixa {
+    opacity: 0; /* Começa completamente transparente */
+    animation: fade 0.5s ease; /* Aplica a animação de fade */
+    position: sticky;
+    display: none; /* inicialmente escondido */
+    height: 0; /* altura inicial */
+}
+
+
+
