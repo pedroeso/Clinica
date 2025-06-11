@@ -69,17 +69,18 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 60%;
     height: 40px;
-    font-size: 12px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     color: variaveis.$corDoTextoSecundario;
-    background-color: variaveis.$corDeFundoBotaoTransparente;
-    text-transform: uppercase;
+    background-color: variaveis.$corVerde;
     border-radius: 18px;
     text-decoration: none;
     padding: 8px 14px;
     letter-spacing: 1px;
-    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    border: 1px solid variaveis.$corCabecalho;
     background-image: none;
     outline: none;
 
@@ -93,7 +94,8 @@ h3 {
     }
 
     &:hover {
-        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 8%);
+        background-color: lighten(variaveis.$corDiferenciada, 1%);
+        color: variaveis.$corVerde;
         cursor: pointer;
     }
 
