@@ -11,7 +11,7 @@
 
 .intro {
     width: 500px;
-    height: 202px;
+    height: 400px;
     display: flex;
     flex-direction: column;
 
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 25px;
+    padding: 40px 25px;
     background-size: cover;
 
     @media (max-width: 768px) {
@@ -99,10 +99,8 @@
 }
 
 .pedro {
-    background-image: linear-gradient(500deg, #6045a1 0%, #13131f 92.32%);
-    border-radius: 50%;
     width: 400px;
-    height: 400px;
+    height: 600px;
     text-align: center;
 
     @media (max-width: 768px) {
@@ -132,10 +130,11 @@
 }
 
 .perfil {
+        border-radius: 5%;
     display: block;
-    margin: auto;
-    padding-top: 60px;
-    padding-left: 30px;
+
+
+
 
     @media (max-width: 768px) {
         width: 220px;
